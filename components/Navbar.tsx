@@ -5,25 +5,35 @@ import { GiFlowerPot } from "react-icons/gi";
 
 export default function Navbar() {
   return (
-    <div className="drawer">
+    <div className="drawer z-30">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
 
       <div className="drawer-content">
         {/* NAVBAR */}
-        <div className="navbar bg-base-100 shadow-sm">
-          <div className="flex-none">
+        <div className="navbar bg-base-100 shadow-sm grid grid-cols-3 items-center">
+
+          {/* KOLOM 1 — KIRI */}
+          <div className="justify-self-start">
             <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                className="inline-block h-5 w-5 stroke-current">
+                className="h-5 w-5 stroke-current">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </label>
           </div>
-          <div className="flex-1">
-            <a className="btn btn-ghost text-xl">Mony Flower</a>
+
+          {/* KOLOM 2 — TENGAH */}
+          <div className="justify-self-center">
+            <img
+              src="/images/logo.png"
+              alt="Mony Flower Logo"
+              className="w-10 h-10 object-contain"
+            />
           </div>
+
         </div>
+
       </div>
 
       {/* SIDEBAR */}
