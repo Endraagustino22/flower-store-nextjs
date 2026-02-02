@@ -1,5 +1,7 @@
 import Navbar from "@/components//Navbar";
+import Card from "@/components/Card";
 import Link from "next/link";
+import FlowerCarousel from "@/components/FlowerCarousel";
 
 export default function Home() {
   return (
@@ -32,6 +34,8 @@ export default function Home() {
         </div>
 
       </div>
+      
+      <Card />
 
     </>
   );
