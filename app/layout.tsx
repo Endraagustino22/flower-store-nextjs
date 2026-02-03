@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { GreatVibes, Montserrat,  } from './font';
+import { GreatVibes, Montserrat, CrimsonText  } from './font';
 
 
 const geistSans = Geist({
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${GreatVibes.variable} ${Montserrat.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${GreatVibes.variable} ${Montserrat.variable} ${CrimsonText.variable} antialiased`}
       >
         {children}
       </body>

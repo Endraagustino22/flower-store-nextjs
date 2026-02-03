@@ -20,3 +20,13 @@ export const Montserrat = localFont({
   ],
   variable: '--font-Montserrat',
 })
+
+export const CrimsonText = localFont({
+  src: [
+    {
+      path: '../public/fonts/CrimsonText-Regular.ttf',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-CrimsonText',
+})

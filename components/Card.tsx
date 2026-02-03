@@ -1,61 +1,44 @@
+import Image from "next/image";
+import {flowers} from "../data/flowers"
+
+
 export default function Card() {
     return (
 
-        <div className="grid grid-cols-3">
-            <div className="card bg-base-100 w-96 shadow-sm mt-10">
-                <figure>
-                    <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">
-                        Card Title
-                        <div className="badge badge-secondary">NEW</div>
-                    </h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
+        <div className="pb-20">
+
+            <h1 className="text-center py-4 mt-10 md:mt-16 text-3xl">Produk Kami</h1>
+
+            <div className="grid grid-cols-3 md:grid-cols-5 gap-3 md:px-10">
+
+                {/* CARD */}
+                {flowers.map((flower) => (
+                <div className="card shadow-sm" key={flower.id}>
+                    <figure>
+                        <div className="relative aspect-5/6 w-full bg-gray-100">
+                            <Image
+                                src={flower.image}
+                                alt="product"
+                                fill
+                                className="object-cover p-2"
+                            />
+                        </div>
+                    </figure>
+
+                    <div className="p-3">
+                        <h2 className="card-title text-xs md:text-sm font-medium">
+                            {flower.name}
+                        </h2>
+                        <p className="text-xs md:text-sm text-gray-500">
+                            Rp. {flower.price.toLocaleString('id-ID')}  
+                        </p>
                     </div>
                 </div>
-            </div>
-            <div className="card bg-base-100 w-96 shadow-sm mt-10">
-                <figure>
-                    <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">
-                        Card Title
-                        <div className="badge badge-secondary">NEW</div>
-                    </h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
-                    </div>
-                </div>
-            </div>
-            <div className="card bg-base-100 w-96 shadow-sm mt-10">
-                <figure>
-                    <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">
-                        Card Title
-                        <div className="badge badge-secondary">NEW</div>
-                    </h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
-                    </div>
-                </div>
+                ))}
+                {/* END CARD */}
+
             </div>
         </div>
+
     );
 }

@@ -10,7 +10,7 @@ export default function Navbar() {
 
       <div className="drawer-content">
         {/* NAVBAR */}
-        <div className="navbar bg-base-100 shadow-sm grid grid-cols-3 items-center">
+        <div className="navbar shadow-sm grid grid-cols-3 items-center">
 
           {/* KOLOM 1 — KIRI */}
           <div className="justify-self-start">
@@ -28,9 +28,10 @@ export default function Navbar() {
             <img
               src="/images/logo.png"
               alt="Mony Flower Logo"
-              className="w-10 h-10 object-contain"
+              className="w-10 h-10 md:w-14 md:h-14 object-contain"
             />
           </div>
+          
 
         </div>
 
