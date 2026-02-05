@@ -1,7 +1,6 @@
 import Image from "next/image";
 import {flowers} from "../data/flowers"
 
-
 export default function Card() {
     return (
 
@@ -20,7 +19,7 @@ export default function Card() {
                                 src={flower.image}
                                 alt="product"
                                 fill
-                                className="object-cover p-2"
+                                className="object-cover"
                             />
                         </div>
                     </figure>

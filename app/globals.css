@@ -16,23 +16,12 @@
   --font-CrimsonText: var(--font-CrimsonText);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
-
-/* MANUAL OVERRIDE */
-html.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
-
-html.light {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+} */
 
 body {
   background: var(--background);
